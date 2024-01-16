@@ -9,11 +9,7 @@ export type ApplicationLayoutProps = PropsWithChildren<{}>
 export function ApplicationLayout(props: ApplicationLayoutProps) {
     return (
         <div data-testid="application-layout" className={styles.container}>
-            <AppProvider>
-                <HeaderWidget />
-                {props.children}
-                <FooterWidget />
-            </AppProvider>
+            <AppProvider>{props.children}</AppProvider>
         </div>
     )
 }

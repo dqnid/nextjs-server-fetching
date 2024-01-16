@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.data-fetching {
+    display: grid;
+    padding: 20rem;
+    gap: 8rem;
+    background-color: #fafafa;
+    grid-template-columns: 1fr 1fr;
+
+    > * {
+        background-color: #e9ecef;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        min-height: 15rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > h3 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 200;
+        }
+
+        > div {
+            > span {
+                font-weight: 200;
+                &:not(:last-child)::after {
+                    content: ', ';
+                }
+            }
+            &:nth-of-type(2) {
+                text-align: center;
+            }
+            > button {
+                background-color: #8e9aaf;
+                color: white;
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+
+                transition: all 0.1s;
+
+                &:hover {
+                    transform: translateY(-4px) scale(1.02);
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+            }
+        }
+    }
+}
+
+.main-presentation {
+    > button {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        background-color: #8e9aaf;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-weight: 200;
+        font-size: 1.5rem;
+
+        transition: all 0.1s;
+
+        &:hover {
+            transform: translateX(-50%) translateY(-4px) scale(1.02);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+    > div {
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 10rem 30rem;
+
+        > h3 {
+            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 100;
+        }
+    }
+    &-comparation {
+    }
+}
