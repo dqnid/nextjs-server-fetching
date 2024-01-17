@@ -37,10 +37,9 @@ export default function Presentation() {
 function Introduction() {
     return (
         <div className="main-presentation-comparation">
-            <h3>Next</h3>
-            <div>
-                <p>Nos da la posibilidad de renderizar desde el servidor</p>
-            </div>
+            <h1>
+                NEXT<span>.JS</span>
+            </h1>
         </div>
     )
 }
@@ -50,17 +49,21 @@ function Rendering() {
         <div className="main-presentation-comparation">
             <h3>Rendering</h3>
             <div>
-                The rendering works is split into chunks: - By individual route
-                segments - By React [Suspense
-                boundaries](https://react.dev/reference/react/Suspense) (react
-                way of having a fallback while a components has finished
-                loading) Each chunk is rendered in the server, then, on the
-                client: 1. The HTML is used to immediately show fast preview. 2.
-                The server components rendered are inserted to update the DOM
-                (components rendered in server with placeholders for client
-                components and props). 3. `JS` instructions are used to
-                [hydrate?](https://react.dev/reference/react-dom/client/hydrateRoot)
-                Client Components and make the application interactive.
+                The rendering works is split into chunks:
+                <ul>
+                    <li>- By individual route segments </li>
+                    <li>- By React with Suspense boundaries </li>
+                </ul>
+                Each chunk is rendered in the server, then, on the client:
+                <ul>
+                    <li>
+                        1. The HTML is used to immediately show fast preview
+                    </li>
+                    <li>2. The components are inserted to update the DOM</li>
+                    <li>
+                        3. JS instructions are used to hydrate client components
+                    </li>
+                </ul>
             </div>
         </div>
     )
@@ -72,25 +75,9 @@ function Strategies() {
             <h3>Strategies</h3>
             <div>
                 <ul>
-                    <li>
-                        - Static rendering (default): Good for static pages:
-                        Rendered in build time or in the background after data
-                        revalidation
-                    </li>
-                    <li>
-                        - Security: sensitive data is kept int the server (API
-                        keys and tokens)
-                    </li>
-                    <li>
-                        - Dynamic rendering: rendered per user request, Next
-                        uses this type of rendering automatically when discovers
-                        a dynamic function (`cookies()`, `headers()`,
-                        `userSearchParams()`).
-                    </li>
-                    <li>
-                        - Streaming: work is split into chunks and streamed as
-                        they become ready so the load is progressive.
-                    </li>
+                    <li>- Static rendering (default)</li>
+                    <li>- Dynamic rendering: rendered per user request</li>
+                    <li>- Streaming: work is split into chunks and streamed</li>
                 </ul>
             </div>
         </div>
@@ -100,33 +87,15 @@ function Strategies() {
 function Benefits() {
     return (
         <div className="main-presentation-benefits">
-            <h3>Beneficios</h3>
+            <h3>Benefits</h3>
             <div>
                 <ul>
-                    <li>
-                        - Fetch data directly on the server, performance and
-                        load benefits.
-                    </li>
-                    <li>
-                        - Security: sensitive data is kept int the server (API
-                        keys and tokens)
-                    </li>
-                    <li>
-                        - Caching: results can be cached to improve performance
-                        between users.
-                    </li>
-                    <li>
-                        - Bundle size: will be reduced as part of the
-                        application will reside in the server.
-                    </li>
-                    <li>
-                        - SEO: because the pages will be rendered the search
-                        engine bots will make good use of it.
-                    </li>
-                    <li>
-                        - Streaming: to split the rendering into chunks and
-                        stream them as they become ready.
-                    </li>
+                    <li>- Fetch data directly on the server</li>
+                    <li>- Security: sensitive data is kept int the server</li>
+                    <li>- Caching</li>
+                    <li>- Bundle size reduced</li>
+                    <li>- SEO </li>
+                    <li>- Streaming</li>
                 </ul>
             </div>
         </div>

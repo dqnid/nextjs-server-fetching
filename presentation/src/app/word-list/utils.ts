@@ -1,5 +1,5 @@
 const WORDLIST_API_URL =
-    'http://localhost:3000/words/es?complexity=medium&howMany=30'
+    'http://localhost:3000/words/es?complexity=medium&howMany=20'
 
 export type WordElement = {
     word: string
@@ -11,8 +11,8 @@ export type WordListRepsonse = {
 }
 
 // fetch("https://...", { cache: "no-store" });
-export const fetchWordlist = async () => {
-    const wordList: WordListRepsonse = await fetch(WORDLIST_API_URL, {
+export const fetchWordlist = async (url?: string) => {
+    const wordList: WordListRepsonse = await fetch(url ?? WORDLIST_API_URL, {
         next: { tags: ['wordlist'] },
     }).then((response) => response.json())
 
