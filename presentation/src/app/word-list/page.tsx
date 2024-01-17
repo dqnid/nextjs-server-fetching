@@ -6,8 +6,8 @@ import ServerWordList from './components/serverside-word-list'
 export default function WordList() {
     return (
         <div className="data-fetching">
-            <ServerWordList />
             <ClientWordList />
+            <ServerWordList />
             <NextAPIWordList />
         </div>
     )

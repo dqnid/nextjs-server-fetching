@@ -1,8 +1,13 @@
 import RevalidateButton from './revalidate-button'
 import { fetchWordlist } from '../utils'
+import { useEffect } from 'react'
 
 export default async function ServerWordList() {
     const response = await fetchWordlist()
+
+    useEffect(() => {
+        console.log('Peta?')
+    }, [])
 
     return (
         <div data-testid="word-list-view" className="data-fetching-server">
